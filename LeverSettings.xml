@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Joystick_Levers>
+  <Levers>
+    <Lever>Reverser</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>X</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>ThrottleAndBrake</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>Y</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>Throttle</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>Z</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>DynamicBrake</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>RX</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>TrainBrake</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>RY</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>LocoBrake</Lever>
+    <JoystickGuid>4f488fb0-a608-11f0-800a-444553540000</JoystickGuid>
+    <JoystickName>vJoy Device</JoystickName>
+    <JoystickAxis>RZ</JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>BailOff</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>False</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>Wipers</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>Lights</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>WalkForwardsBackwards</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>WalkLeftRight</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>LookLeftRight</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+  <Levers>
+    <Lever>LookUpDown</Lever>
+    <JoystickGuid></JoystickGuid>
+    <JoystickName></JoystickName>
+    <JoystickAxis></JoystickAxis>
+    <ReverseDirection>false</ReverseDirection>
+    <Range>0, 1</Range>
+  </Levers>
+</Joystick_Levers>
