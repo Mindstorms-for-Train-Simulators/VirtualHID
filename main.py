@@ -79,14 +79,17 @@ def handle_client(conn):
                         left = assignLevers(msg.get("left"))
                         middle = assignLevers(msg.get("middle"))
                         right = assignLevers(msg.get("right"))
+                        color = assignLevers(msg.get("color"))
                         print(f"[CONFIG] Left: {msg.get('left')} => {left}")
                         print(f"[CONFIG] Middle: {msg.get('middle')} => {middle}")
                         print(f"[CONFIG] Right: {msg.get('right')} => {right}")
+                        print(f"[CONFIG] Color: {msg.get('color')} => {color}")
 
                     elif msg.get("type") == "DATA":
                         apply_axis(left, msg.get("left", 0))
                         apply_axis(middle, msg.get("middle", 0))
                         apply_axis(right, msg.get("right", 0))
+                        apply_axis(color, msg.get("color", 0))
 
                         current_keys = set(msg.get("buttons", []))
 
