@@ -1,7 +1,7 @@
 import socket
 import json
 import pyvjoy
-import keyboard
+from pynput.keyboard import Controller, KeyCode, Key
 
 HOST = "0.0.0.0"
 PORT = 1337
@@ -14,6 +14,20 @@ THROTTLE = pyvjoy.HID_USAGE_Z
 DYNAMIC_BRAKE = pyvjoy.HID_USAGE_RX
 TRAIN_BRAKE = pyvjoy.HID_USAGE_RY
 LOCO_BRAKE = pyvjoy.HID_USAGE_RZ
+
+KEYS = {"alt": Key.alt, "altleft": Key.alt_l, "altright": Key.alt_r, "backspace": Key.backspace, "capslock": Key.caps_lock, "cmd": Key.cmd, "cmdleft": Key.cmd_l,
+        "cmdright": Key.cmd_r, "ctrl": Key.ctrl, "ctrlleft": Key.ctrl_l, "ctrlright": Key.ctrl_r, "delete": Key.delete, "down": Key.down, "end": Key.end, 
+        "enter": Key.enter, "escape": Key.esc, "f1": Key.f1, "f2": Key.f2, "f3": Key.f3, "f4": Key.f4, "f5": Key.f5, "f6": Key.f6, "f7": Key.f7, "f8": Key.f8, "f9": Key.f9, 
+        "f10": Key.f10, "f11": Key.f11, "f12": Key.f12, "home": Key.home, "insert": Key.insert, "left": Key.left, "pagedown": Key.page_down, "pageup": Key.page_up, 
+        "right": Key.right, "shift": Key.shift, "shiftleft": Key.shift_l, "shiftright": Key.shift_r, "space": Key.space, "tab": Key.tab, "up": Key.up, "n0": KeyCode.from_vk(96),
+        "n1": KeyCode.from_vk(97), "n2": KeyCode.from_vk(98), "n3": KeyCode.from_vk(99), "n4": KeyCode.from_vk(100), "n5": KeyCode.from_vk(101), "n6": KeyCode.from_vk(102),
+        "n7": KeyCode.from_vk(103), "n8": KeyCode.from_vk(104), "n9": KeyCode.from_vk(105), "decimal": KeyCode.from_vk(110), "multiply": KeyCode.from_vk(106),
+        "add": KeyCode.from_vk(107), "subtract": KeyCode.from_vk(109), "divide": KeyCode.from_vk(111), "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7",
+        "8": "8", "9": "9", "0": "0", "-": "-", "=": "=", "`": "`", "a": "a", "b": "b", "c": "c", "d": "d", "e": "e", "f": "f", "g": "g", "h": "h", "i": "i", "j": "j", "k": "k",
+        "l": "l", "m": "m", "n": "n", "o": "o", "p": "p", "q": "q", "r": "r", "s": "s", "t": "t", "u": "u", "v": "v", "w": "w", "x": "x", "y": "y", "z": "z", "[": "[", "]": "]",
+        ";": ";", "'": "'", ",": ",", ".": ".", "/": "/", "\\": "\\"}
+
+keyboard = Controller()
 
 def assignLevers(name):
     return {
@@ -95,11 +109,15 @@ def handle_client(conn):
 
                         for key in current_keys - pressed_keys:
                             print(f"[KEYDOWN] {key}")
-                            keyboard.press(key)
+
+                            for action in key.split("+"):
+                                keyboard.press(KEYS[action])
 
                         for key in pressed_keys - current_keys:
                             print(f"[KEYUP] {key}")
-                            keyboard.release(key)
+
+                            for action in reversed(key.split("+")):
+                                keyboard.release(KEYS[action])
 
                         pressed_keys = current_keys
 
