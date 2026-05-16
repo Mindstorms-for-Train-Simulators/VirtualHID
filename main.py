@@ -1,3 +1,5 @@
+# terminal code for ease: python -m auto_py_to_exe
+
 import socket
 import json
 import pyvjoy
@@ -103,7 +105,10 @@ def handle_client(conn):
                         apply_axis(left, msg.get("left", 0))
                         apply_axis(middle, msg.get("middle", 0))
                         apply_axis(right, msg.get("right", 0))
-                        apply_axis(color, msg.get("color", 0))
+                        color_value = msg.get("color", 0)
+                        if isinstance(color_value, str):
+                            color_value = { "Color.BLACK": -100, "Color.RED": -60, "Color.YELLOW": -20, "Color.GREEN": 20, "Color.BLUE": 60, "Color.WHITE": 100 }.get(color_value, 0)
+                        apply_axis(color, color_value)
 
                         current_keys = set(msg.get("buttons", []))
 
